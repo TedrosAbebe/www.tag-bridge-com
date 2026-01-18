@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="am" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ታግ ብሪጅ | የቴክኖሎጂ ይዘት ባለሙያዎች</title>
+    <meta name="description" content="ታግ ብሪጅ - በአፕሊኬሽን፣ ERP፣ ክሪፕቶ፣ AI እና ኦንላይን ቢዝነስ ላይ ያተኮሩ ሙያዊ ይዘቶች">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile-First Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <img src="logo.png" alt="Tag Bridge Logo" class="logo-image">
+                    <span class="logo-text">ታግ ብሪጅ</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation Menu (visible on desktop) -->
+            <div class="desktop-nav">
+                <a href="#home" class="desktop-nav-link" data-am="መነሻ" data-en="Home">መነሻ</a>
+                <a href="#about" class="desktop-nav-link" data-am="ስለ እኛ" data-en="About">ስለ እኛ</a>
+                <a href="#products" class="desktop-nav-link" data-am="ምርቶች" data-en="Products">ምርቶች</a>
+                <a href="#services" class="desktop-nav-link" data-am="አገልግሎቶች" data-en="Services">አገልግሎቶች</a>
+                <a href="#contact" class="desktop-nav-link" data-am="ያግኙን" data-en="Contact">ያግኙን</a>
+            </div>
+            
+            <div class="nav-right">
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="am">አማ</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="nav-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (hidden on desktop) -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="#home" class="mobile-nav-link" data-am="መነሻ" data-en="Home" onclick="closeMobileMenu()">መነሻ</a>
+                <a href="#about" class="mobile-nav-link" data-am="ስለ እኛ" data-en="About" onclick="closeMobileMenu()">ስለ እኛ</a>
+                <a href="#products" class="mobile-nav-link" data-am="ምርቶች" data-en="Products" onclick="closeMobileMenu()">ምርቶች</a>
+                <a href="#services" class="mobile-nav-link" data-am="አገልግሎቶች" data-en="Services" onclick="closeMobileMenu()">አገልግሎቶች</a>
+                <a href="#contact" class="mobile-nav-link" data-am="ያግኙን" data-en="Contact" onclick="closeMobileMenu()">ያግኙን</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line" data-am="እንኳን ወደ ታግ ብሪጅ በደህና መጡ" data-en="Welcome to Tag Bridge">እንኳን ወደ ታግ ብሪጅ በደህና መጡ</span>
+                </h1>
+                <p class="hero-subtitle" 
+                   data-am="በአፕሊኬሽን፣ ERP፣ ክሪፕቶ ከረንሲ፣ ፎሬክስ ትሬዲንግ፣ AI እና ኦንላይን ቢዝነስ ላይ ያተኮሩ ሙያዊ ይዘቶችን እናቀርባለን።"
+                   data-en="We provide professional content focused on Applications, ERP, Cryptocurrency, Forex Trading, AI and Online Business.">
+                    በአፕሊኬሽን፣ ERP፣ ክሪፕቶ ከረንሲ፣ ፎሬክስ ትሬዲንግ፣ AI እና ኦንላይን ቢዝነስ ላይ ያተኮሩ ሙያዊ ይዘቶችን እናቀርባለን።
+                </p>
+                
+                <!-- Separate Social Media Call to Action -->
+                <div class="social-cta">
+                    <p class="social-cta-text" data-am="በማህበራዊ ሚዲያዎቻችን ይከታተሉን" data-en="Follow us on Social Media">በማህበራዊ ሚዲያዎቻችን ይከታተሉን</p>
+                </div>
+                
+                <!-- Social Media in Hero -->
+                <div class="hero-social">
+                    <div class="social-grid">
+                        <a href="https://youtube.com/@tagbridge" target="_blank" class="social-card youtube">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>YouTube</h4>
+                                <p>በቪዲዮ ይመልከቱ</p>
+                            </div>
+                        </a>
+                        <a href="https://t.me/tagbridge" target="_blank" class="social-card telegram">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>Telegram</h4>
+                                <p>🚀 ይቀላቀሉ 💫</p>
+                            </div>
+                        </a>
+                        <a href="https://tiktok.com/@tagbridge" target="_blank" class="social-card tiktok">
+                            <div class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                </svg>
+                            </div>
+                            <div class="social-info">
+                                <h4>TikTok</h4>
+                                <p>በቲክቶክ ይከተሉን</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="scrollToSection('about')" data-am="ተጨማሪ ይወቁ" data-en="Learn More">
+                        <span>ተጨማሪ ይወቁ</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')" data-am="ያግኙን" data-en="Contact Us">
+                        <span>ያግኙን</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/251991856292?text=ሰላም! ከታግ ብሪጅ ጋር መነጋገር እፈልጋለሁ።" target="_blank" class="whatsapp-float">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-am="ስለ እኛ" data-en="About Us">ስለ እኛ</span>
+                <h2 data-am="ስለ እኛ" data-en="About Us">ስለ እኛ</h2>
+            </div>
+            <div class="about-content-professional">
+                <div class="about-card-modern">
+                    <div class="about-icon">
+                        <div class="icon-circle">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="about-content-text">
+                        <h3 data-am="ታግ ብሪጅ (Tag Bridge)" data-en="Tag Bridge">ታግ ብሪጅ (Tag Bridge)</h3>
+                        <p data-am="በዘመናዊው የዲጂታል ዓለም እና በእርስዎ ስኬት መካከል ያለ የዕውቀት ድልድይ ነው። እኛ በክሪፕቶ ከረንሲ፣ በፎሬክስ ኤክስቼንጅ፣ በአርቲፊሻል ኢንተለጀንስ (AI)፣ በኦንላይን ቢዝነስ እና በተለያዩ የላቁ ዲጂታል መተግበሪያዎች ዙሪያ ጥልቅ ትንታኔዎችን እና ተግባራዊ መረጃዎችን የምናቀርብ የሶሻል ሚዲያ ይዘት ፈጣሪዎች ነን።" 
+                           data-en="We are a knowledge bridge between the modern digital world and your success. We are social media content creators who provide in-depth analysis and practical information around cryptocurrency, forex exchange, artificial intelligence (AI), online business, and various advanced digital applications.">
+                            በዘመናዊው የዲጂታል ዓለም እና በእርስዎ ስኬት መካከል ያለ የዕውቀት ድልድይ ነው። እኛ በክሪፕቶ ከረንሲ፣ በፎሬክስ ኤክስቼንጅ፣ በአርቲፊሻል ኢንተለጀንስ (AI)፣ በኦንላይን ቢዝነስ እና በተለያዩ የላቁ ዲጂታል መተግበሪያዎች ዙሪያ ጥልቅ ትንታኔዎችን እና ተግባራዊ መረጃዎችን የምናቀርብ የሶሻል ሚዲያ ይዘት ፈጣሪዎች ነን።
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🎯</span>
+                                <span data-am="ዲጂታል ባለሙያዎች" data-en="Digital Experts">ዲጂታል ባለሙያዎች</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">📚</span>
+                                <span data-am="ትምህርታዊ ይዘት" data-en="Educational Content">ትምህርታዊ ይዘት</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🌟</span>
+                                <span data-am="ተግባራዊ መፍትሄዎች" data-en="Practical Solutions">ተግባራዊ መፍትሄዎች</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section - Compact Version -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-am="ምርቶች" data-en="Products">ምርቶች</span>
+            </div>
+            <div class="products-ecommerce">
+                <!-- Crypto Book -->
+                <div class="product-item-ecommerce featured">
+                    <div class="product-badge-ecommerce bestseller" data-am="ተወዳጅ" data-en="Bestseller">ተወዳጅ</div>
+                    <div class="product-image-ecommerce">
+                        <div class="product-icon-ecommerce crypto">₿</div>
+                    </div>
+                    <div class="product-details-ecommerce">
+                        <h3 data-am="ክሪፕቶ ከረንሲ በአማረኛ" data-en="Cryptocurrency in Amharic">ክሪፕቶ ከረንሲ በአማረኛ</h3>
+                        <p class="product-description-ecommerce" data-am="በአማረኛ የተዘጋጀ ሙሉ የክሪፕቶ ከረንሲ መማሪያ መጽሃፍ" data-en="Complete cryptocurrency learning book prepared in Amharic">በአማረኛ የተዘጋጀ ሙሉ የክሪፕቶ ከረንሲ መማሪያ መጽሃፍ</p>
+                        <div class="product-purchase-ecommerce">
+                            <div class="product-price-ecommerce">
+                                <span class="price-amount">500</span>
+                                <span class="price-currency" data-am="ብር" data-en="ETB">ብር</span>
+                            </div>
+                            <button class="btn-ecommerce btn-primary-ecommerce" onclick="orderProduct('crypto')">
+                                <span data-am="አሁኑኑ ይዘዙ" data-en="Order Now">አሁኑኑ ይዘዙ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forex Book -->
+                <div class="product-item-ecommerce">
+                    <div class="product-image-ecommerce">
+                        <div class="product-icon-ecommerce forex">📈</div>
+                    </div>
+                    <div class="product-details-ecommerce">
+                        <h3 data-am="ፎሬክስ ትሬዲንግ በአማረኛ" data-en="Forex Trading in Amharic">ፎሬክስ ትሬዲንግ በአማረኛ</h3>
+                        <p class="product-description-ecommerce" data-am="በአማረኛ የተዘጋጀ ሙሉ የፎሬክስ ትሬዲንግ መማሪያ መጽሃፍ" data-en="Complete forex trading learning book prepared in Amharic">በአማረኛ የተዘጋጀ ሙሉ የፎሬክስ ትሬዲንግ መማሪያ መጽሃፍ</p>
+                        <div class="product-purchase-ecommerce">
+                            <div class="product-price-ecommerce">
+                                <span class="price-amount">450</span>
+                                <span class="price-currency" data-am="ብር" data-en="ETB">ብር</span>
+                            </div>
+                            <button class="btn-ecommerce btn-primary-ecommerce" onclick="orderProduct('forex')">
+                                <span data-am="አሁኑኑ ይዘዙ" data-en="Order Now">አሁኑኑ ይዘዙ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Bundle Offer - 3rd Position -->
+                <div class="product-item-ecommerce bundle special-offer">
+                    <div class="product-badge-ecommerce bundle-badge" data-am="🔥 ልዩ ቅናሽ" data-en="🔥 Special Offer">🔥 ልዩ ቅናሽ</div>
+                    <div class="product-image-ecommerce">
+                        <div class="product-icon-ecommerce bundle">💎</div>
+                    </div>
+                    <div class="product-details-ecommerce">
+                        <h3 data-am="ክሪፕቶ + ፎሬክስ ጥቅል" data-en="Crypto + Forex Bundle">ክሪፕቶ + ፎሬክስ ጥቅል</h3>
+                        <p class="product-description-ecommerce attractive-text" data-am="💰 ሁለቱንም መጽሃፍቶች በአንድ ላይ ይግዙ እና 250 ብር ይቆጥቡ! 🎯 የገንዘብ ማግኛ ሚስጥሮች በአንድ ጥቅል! 🚀 ከክሪፕቶ እስከ ፎሬክስ ሙሉ ትምህርት!" data-en="💰 Buy both books together and save 250 ETB! 🎯 Money-making secrets in one bundle! 🚀 Complete education from crypto to forex!">💰 ሁለቱንም መጽሃፍቶች በአንድ ላይ ይግዙ እና 250 ብር ይቆጥቡ! 🎯 የገንዘብ ማግኛ ሚስጥሮች በአንድ ጥቅል! 🚀 ከክሪፕቶ እስከ ፎሬክስ ሙሉ ትምህርት!</p>
+                        <div class="product-purchase-ecommerce">
+                            <div class="product-price-ecommerce">
+                                <span class="price-amount">700</span>
+                                <span class="price-currency" data-am="ብር" data-en="ETB">ብር</span>
+                                <div class="price-original" data-am="ከ 950 ብር" data-en="from 950 ETB">ከ 950 ብር</div>
+                            </div>
+                            <button class="btn-ecommerce btn-primary-ecommerce bundle-btn" onclick="orderProduct('bundle')">
+                                <span data-am="🔥 አሁኑኑ ይዘዙ" data-en="🔥 Order Now">🔥 አሁኑኑ ይዘዙ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTube Guide Book -->
+                <div class="product-item-ecommerce">
+                    <div class="product-image-ecommerce">
+                        <div class="product-icon-ecommerce youtube">📺</div>
+                    </div>
+                    <div class="product-details-ecommerce">
+                        <h3 data-am="የዩቲዩብ ይዘት ፈጣሪዎች መመሪያ" data-en="YouTube Content Creator Guide">የዩቲዩብ ይዘት ፈጣሪዎች መመሪያ</h3>
+                        <p class="product-description-ecommerce" data-am="በአማረኛ የተዘጋጀ ሙሉ የዩቲዩብ ይዘት ፈጠራ መማሪያ መጽሃፍ" data-en="Complete YouTube content creation learning book prepared in Amharic">በአማረኛ የተዘጋጀ ሙሉ የዩቲዩብ ይዘት ፈጠራ መማሪያ መጽሃፍ</p>
+                        <div class="product-purchase-ecommerce">
+                            <div class="product-price-ecommerce">
+                                <span class="price-amount">350</span>
+                                <span class="price-currency" data-am="ብር" data-en="ETB">ብር</span>
+                            </div>
+                            <button class="btn-ecommerce btn-primary-ecommerce" onclick="orderProduct('youtube-guide')">
+                                <span data-am="አሁኑኑ ይዘዙ" data-en="Order Now">አሁኑኑ ይዘዙ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Business Guide -->
+                <div class="product-item-ecommerce">
+                    <div class="product-image-ecommerce">
+                        <div class="product-icon-ecommerce digital">🌐</div>
+                    </div>
+                    <div class="product-details-ecommerce">
+                        <h3 data-am="የዲጂታል እና ኦንላይን ቢዝነስ መመሪያ" data-en="Digital & Online Business Guide">የዲጂታል እና ኦንላይን ቢዝነስ መመሪያ</h3>
+                        <p class="product-description-ecommerce" data-am="በአማረኛ የተዘጋጀ ሙሉ የዲጂታል እና ኦንላይን ቢዝነስ መማሪያ መጽሃፍ" data-en="Complete digital and online business learning book prepared in Amharic">በአማረኛ የተዘጋጀ ሙሉ የዲጂታል እና ኦንላይን ቢዝነስ መማሪያ መጽሃፍ</p>
+                        <div class="product-purchase-ecommerce">
+                            <div class="product-price-ecommerce">
+                                <span class="price-amount">400</span>
+                                <span class="price-currency" data-am="ብር" data-en="ETB">ብር</span>
+                            </div>
+                            <button class="btn-ecommerce btn-primary-ecommerce" onclick="orderProduct('digital-business')">
+                                <span data-am="አሁኑኑ ይዘዙ" data-en="Order Now">አሁኑኑ ይዘዙ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Tools Guide -->
+                <div class="product-item-ecommerce">
+                    <div class="product-image-ecommerce">
+                        <div class="product-icon-ecommerce tools">🛠️</div>
+                    </div>
+                    <div class="product-details-ecommerce">
+                        <h3 data-am="የዲጂታል መሳሪያዎች መመሪያ" data-en="Digital Tools Guide">የዲጂታል መሳሪያዎች መመሪያ</h3>
+                        <p class="product-description-ecommerce" data-am="በአማረኛ የተዘጋጀ ሙሉ የዲጂታል መሳሪያዎች መማሪያ መጽሃፍ" data-en="Complete digital tools learning book prepared in Amharic">በአማረኛ የተዘጋጀ ሙሉ የዲጂታል መሳሪያዎች መማሪያ መጽሃፍ</p>
+                        <div class="product-purchase-ecommerce">
+                            <div class="product-price-ecommerce">
+                                <span class="price-amount">300</span>
+                                <span class="price-currency" data-am="ብር" data-en="ETB">ብር</span>
+                            </div>
+                            <button class="btn-ecommerce btn-primary-ecommerce" onclick="orderProduct('digital-tools')">
+                                <span data-am="አሁኑኑ ይዘዙ" data-en="Order Now">አሁኑኑ ይዘዙ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-am="አገልግሎቶች" data-en="Services">አገልግሎቶች</span>
+                <p data-am="በቴክኖሎጂ አቅራቢዎች እና የቢዝነስ ባለቤቶች መካከል ድልድይ ሆነን የምንሰራባቸው ሙያዊ አገልግሎቶቻችን" data-en="Our professional services working as a bridge between technology providers and business owners">በቴክኖሎጂ አቅራቢዎች እና የቢዝነስ ባለቤቶች መካከል ድልድይ ሆነን የምንሰራባቸው ሙያዊ አገልግሎቶቻችን</p>
+            </div>
+            <div class="services-grid-two">
+                <!-- Digital Products & Services Promotion -->
+                <div class="service-card featured-service">
+                    <div class="service-header">
+                        <div class="service-icon">📢</div>
+                        <h3 data-am="ዲጂታል ምርትና አገልግሎቶች ማስተዋወቅ" data-en="Digital Products & Services Promotion">ዲጂታል ምርትና አገልግሎቶች ማስተዋወቅ</h3>
+                    </div>
+                    <p data-am="የሞባይል መተግበሪያዎችን፣ ERP ሲስተሞችን፣ መጽሃፍቶችን፣ የፋይናንስ ዲጂታል መሳሪያዎችን ጨምሮ ለሌሎች ምርትና አገልግሎቶችዎን በሚሊዮን እይታ ባላቸው የማህበራዊ ሚዲያዎቻችን እናስተዋውቃለን።" data-en="We promote mobile applications, ERP systems, books, financial digital tools and other products/services through our social media platforms with millions of views.">የሞባይል መተግበሪያዎችን፣ ERP ሲስተሞችን፣ መጽሃፍቶችን፣ የፋይናንስ ዲጂታል መሳሪያዎችን ጨምሮ ለሌሎች ምርትና አገልግሎቶችዎን በሚሊዮን እይታ ባላቸው የማህበራዊ ሚዲያዎቻችን እናስተዋውቃለን።</p>
+                    <div class="service-features">
+                        <span data-am="✓ በሚሊዮን እይታ ማህበራዊ ሚዲያ ማስታወቂያ" data-en="✓ Social media ads with millions of views">✓ በሚሊዮን እይታ ማህበራዊ ሚዲያ ማስታወቂያ</span>
+                        <span data-am="✓ ሞባይል አፕ፣ ERP፣ መጽሃፍቶች ማስተዋወቅ" data-en="✓ Mobile apps, ERP, books promotion">✓ ሞባይል አፕ፣ ERP፣ መጽሃፍቶች ማስተዋወቅ</span>
+                        <span data-am="✓ የፋይናንስ ዲጂታል መሳሪያዎች ማስታወቂያ" data-en="✓ Financial digital tools advertising">✓ የፋይናንስ ዲጂታል መሳሪያዎች ማስታወቂያ</span>
+                    </div>
+                    <div class="service-cta">
+                        <a href="https://wa.me/251991856292?text=ሰላም! የዲጂታል ምርትና አገልግሎቶች ማስተዋወቅ አገልግሎት ላይ መረጃ እፈልጋለሁ።" target="_blank" class="btn btn-primary btn-sm">
+                            <span data-am="ያግኙን" data-en="Contact Us">ያግኙን</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Technology Experts Connection -->
+                <div class="service-card bridge-service">
+                    <div class="service-header">
+                        <div class="service-icon">🤝</div>
+                        <h3 data-am="ቢዝነስዎን ከታማኝ ቴክኖሎጂ ባለሙያዎች ጋር ማገናኘት" data-en="Connecting Your Business with Trusted Technology Experts">ቢዝነስዎን ከታማኝ ቴክኖሎጂ ባለሙያዎች ጋር ማገናኘት</h3>
+                    </div>
+                    <p data-am="ቢዝነስዎን ከታማኝ የቴክኖሎጂ ባለሙያዎች ጋር እናገናኛለን። ERP ስርዓት፣ አፕ ልማት፣ ዌብሳይት ልማት እና ሌሎች ቴክኖሎጂ አገልግሎቶች ለሚፈልጉ ድርጅቶች ተስማሚ ባለሙያዎችን እናገናኛለን።" data-en="We connect your business with trusted technology experts. For organizations needing ERP systems, app development, website development and other tech services, we connect you with suitable professionals.">ቢዝነስዎን ከታማኝ የቴክኖሎጂ ባለሙያዎች ጋር እናገናኛለን። ERP ስርዓት፣ አፕ ልማት፣ ዌብሳይት ልማት እና ሌሎች ቴክኖሎጂ አገልግሎቶች ለሚፈልጉ ድርጅቶች ተስማሚ ባለሙያዎችን እናገናኛለን።</p>
+                    <div class="service-features">
+                        <span data-am="✓ ERP ስርዓት ባለሙያዎች ግንኙነት" data-en="✓ ERP system experts connection">✓ ERP ስርዓት ባለሙያዎች ግንኙነት</span>
+                        <span data-am="✓ አፕ ልማት ባለሙያዎች ማገናኘት" data-en="✓ App development experts connection">✓ አፕ ልማት ባለሙያዎች ማገናኘት</span>
+                        <span data-am="✓ ዌብሳይት ልማት ባለሙያዎች ግንኙነት" data-en="✓ Website development experts connection">✓ ዌብሳይት ልማት ባለሙያዎች ግንኙነት</span>
+                    </div>
+                    <div class="service-cta">
+                        <a href="https://wa.me/251991856292?text=ሰላም! ቢዝነሴን ከታማኝ ቴክኖሎጂ ባለሙያዎች ጋር ማገናኘት እፈልጋለሁ።" target="_blank" class="btn btn-primary btn-sm">
+                            <span data-am="ያግኙን" data-en="Contact Us">ያግኙን</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-am="ያግኙን" data-en="Contact Us">ያግኙን</span>
+                <p data-am="ለማንኛውም ጥያቄዎ እና አገልግሎትዎ ሃሳብዎን ያጋሩን" data-en="Share your questions and service ideas with us">ለማንኛውም ጥያቄዎ እና አገልግሎትዎ ሃሳብዎን ያጋሩን</p>
+            </div>
+            <div class="contact-grid">
+                <!-- Social Media & Contact Links -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 data-am="ያግኙን" data-en="Contact Us">ያግኙን</h3>
+                        <div class="contact-links">
+                            <a href="mailto:tedayeerasu@gmail.com" class="contact-link email">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-name">Email</span>
+                                    <span class="contact-desc">tedayeerasu@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/251991856292" target="_blank" class="contact-link whatsapp">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-name">WhatsApp</span>
+                                    <span class="contact-desc" data-am="ወዲያውኑ ያግኙን" data-en="Contact us instantly">ወዲያውኑ ያግኙን</span>
+                                </div>
+                            </a>
+                            <a href="https://youtube.com/@tagbridge" target="_blank" class="contact-link youtube">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-name">YouTube</span>
+                                    <span class="contact-desc" data-am="በቪዲዮ ይመልከቱ" data-en="Watch our videos">በቪዲዮ ይመልከቱ</span>
+                                </div>
+                            </a>
+                            <a href="https://t.me/tagbridge" target="_blank" class="contact-link telegram">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-name">Telegram</span>
+                                    <span class="contact-desc" data-am="🎯 ይቀላቀሉ ✨" data-en="🎯 Join us ✨">🎯 ይቀላቀሉ ✨</span>
+                                </div>
+                            </a>
+                            <a href="https://tiktok.com/@tagbridge" target="_blank" class="contact-link tiktok">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-name">TikTok</span>
+                                    <span class="contact-desc" data-am="በቲክቶክ ይከተሉን" data-en="Follow us on TikTok">በቲክቶክ ይከተሉን</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3 data-am="ፈጣን መልእክት" data-en="Quick Message">ፈጣን መልእክት</h3>
+                    <form class="contact-form" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="message" data-am="መልእክትዎን ይጻፉ" data-en="Write your message">መልእክትዎን ይጻፉ</label>
+                            <textarea id="message" name="message" rows="4" placeholder="ጥያቄዎን፣ አገልግሎት ፍላጎትዎን ወይም ሃሳብዎን ይጻፉ..."></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-full" onclick="sendMessage()">
+                            <span data-am="ላክ" data-en="Send">ላክ</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="logo.png" alt="Tag Bridge Logo" class="logo-image">
+                        <span class="logo-text">ታግ ብሪጅ</span>
+                    </div>
+                    <p data-am="በቴክኖሎጂ አቅራቢዎች እና የቢዝነስ ባለቤቶች መካከል ድልድይ ሆነን የምንሰራ የዲጂታል ይዘት ፈጣሪዎች" data-en="Digital content creators working as a bridge between technology providers and business owners">በቴክኖሎጂ አቅራቢዎች እና የቢዝነስ ባለቤቶች መካከል ድልድይ ሆነን የምንሰራ የዲጂታል ይዘት ፈጣሪዎች</p>
+                    <div class="footer-social">
+                        <a href="https://youtube.com/@tagbridge" target="_blank" title="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/tagbridge" target="_blank" title="Telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/@tagbridge" target="_blank" title="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/tagbridge" target="_blank" title="Telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-am="ምርቶች" data-en="Products">ምርቶች</h4>
+                        <ul>
+                            <li><a href="#products" data-am="ክሪፕቶ ከረንሲ መጽሃፍ" data-en="Cryptocurrency Book">ክሪፕቶ ከረንሲ መጽሃፍ</a></li>
+                            <li><a href="#products" data-am="ፎሬክስ ትሬዲንግ መጽሃፍ" data-en="Forex Trading Book">ፎሬክስ ትሬዲንግ መጽሃፍ</a></li>
+                            <li><a href="#products" data-am="ዩቲዩብ መመሪያ" data-en="YouTube Guide">ዩቲዩብ መመሪያ</a></li>
+                            <li><a href="#products" data-am="ዲጂታል ቢዝነስ መመሪያ" data-en="Digital Business Guide">ዲጂታል ቢዝነስ መመሪያ</a></li>
+                            <li><a href="#products" data-am="ክሪፕቶ + ፎሬክስ ጥቅል" data-en="Crypto + Forex Bundle">ክሪፕቶ + ፎሬክስ ጥቅል</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-am="አገልግሎቶች" data-en="Services">አገልግሎቶች</h4>
+                        <ul>
+                            <li><a href="#services" data-am="ዲጂታል ምርት ማስተዋወቅ" data-en="Digital Product Promotion">ዲጂታል ምርት ማስተዋወቅ</a></li>
+                            <li><a href="#services" data-am="ቴክኖሎጂ ባለሙያዎች ማገናኘት" data-en="Tech Expert Connection">ቴክኖሎጂ ባለሙያዎች ማገናኘት</a></li>
+                            <li><a href="#services" data-am="ማህበራዊ ሚዲያ ማስታወቂያ" data-en="Social Media Marketing">ማህበራዊ ሚዲያ ማስታወቂያ</a></li>
+                            <li><a href="#services" data-am="ቢዝነስ ማማከር" data-en="Business Consulting">ቢዝነስ ማማከር</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-am="ያግኙን" data-en="Contact">ያግኙን</h4>
+                        <ul>
+                            <li><a href="https://wa.me/251991856292" data-am="WhatsApp: 0991856292" data-en="WhatsApp: 0991856292">WhatsApp: 0991856292</a></li>
+                            <li><a href="mailto:tedayeerasu@gmail.com" data-am="Email: tedayeerasu@gmail.com" data-en="Email: tedayeerasu@gmail.com">Email: tedayeerasu@gmail.com</a></li>
+                            <li><a href="#contact" data-am="ፈጣን መልእክት" data-en="Quick Message">ፈጣን መልእክት</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-am="&copy; 2024 ታግ ብሪጅ። ሁሉም መብቶች የተጠበቁ ናቸው።" data-en="&copy; 2024 Tag Bridge. All rights reserved.">&copy; 2024 ታግ ብሪጅ። ሁሉም መብቶች የተጠበቁ ናቸው።</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
